@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import AppProvider from "./provider/AppProvider";
+import Header from "./component/organism/Header";
+import Home from "./component/organism/Home";
+import About from "./component/organism/About";
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProvider>
+      <Header/>
+      <Home />
+      <About />
+    </AppProvider>
   );
 }
 
